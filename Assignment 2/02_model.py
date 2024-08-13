@@ -25,24 +25,6 @@ print(model.summary())
 # Fit the model
 history = model.fit(X_train, y_train, epochs=550, validation_split=0.1)
 
-# # Generate predictions
-# y_pred = model.predict(X_test)
-
-# # Plot the results
-# plt.figure(figsize=(14, 7))
-
-# # Scatter plot of actual vs predicted salaries
-# plt.subplot(1, 2, 1)
-# plt.scatter(X_test, y_test, color='blue', label='Actual Salaries')
-# plt.scatter(X_test, y_pred, color='red', label='Predicted Salaries')
-# plt.xlabel('Years of Experience')
-# plt.ylabel('Salary')
-# plt.title('Actual vs Predicted Salaries')
-# plt.legend()
-
-# plt.tight_layout()
-# plt.show()
-
 loss, mae = model.evaluate(X_test, y_test)
 print(f"Test Mean Absolute Error: {mae}")
 
